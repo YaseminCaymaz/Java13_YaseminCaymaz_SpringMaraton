@@ -45,4 +45,25 @@ public class RandevuService {
             throw new DoktorHastaRandevuException(ErrorType.INTERNAL_ERROR);
         return randevuList;
     }
+
+    public List<Randevu> getAll() {
+        List<Randevu> randevuList=randevuRepository.findAll();
+        if(randevuList.isEmpty())
+            throw new DoktorHastaRandevuException(ErrorType.INTERNAL_ERROR);
+        return randevuList;
+    }
+
+    public List<Randevu> findByHastaId(Long hastaId) {
+        List<Randevu> randevuList=randevuRepository.findByHastaId(hastaId);
+        if(randevuList.isEmpty())
+            throw new DoktorHastaRandevuException(ErrorType.INTERNAL_ERROR);
+        return randevuList;
+    }
+
+    public List<Randevu> findByTarih(Long tarih) {
+        List<Randevu> randevuList=randevuRepository.findByTarih(tarih);
+        if(randevuList.isEmpty())
+            throw new DoktorHastaRandevuException(ErrorType.INTERNAL_ERROR);
+        return randevuList;
+    }
 }

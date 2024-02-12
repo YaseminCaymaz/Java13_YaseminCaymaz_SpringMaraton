@@ -7,4 +7,8 @@ import java.util.List;
 
 public interface RandevuRepository extends JpaRepository<Randevu,Long> {
     List<Randevu> findByDoktorId(Long doktorId);
+
+    List<Randevu> findByHastaId(Long hastaId);
+
+    List<Randevu> findByTarih(Long tarih);
 }

@@ -24,7 +24,7 @@ public class BransService {
     public List<Brans> findAll() {
         List<Brans> bransList=bransRepository.findAll();
         if (bransList.isEmpty())
-            throw new DoktorHastaRandevuException(ErrorType.ISTENILEN_VERI_BULUNMAKTADIR);
+            throw new DoktorHastaRandevuException(ErrorType.ISTENILEN_VERI_BULUNAMAMAKTADIR);
         return bransList;
     }
 
@@ -37,7 +37,7 @@ public class BransService {
     public Brans getByName(String bransName){
         Brans brans=bransRepository.findByAd(bransName);
         if(brans==null)
-            throw new DoktorHastaRandevuException(ErrorType.ISTENILEN_VERI_BULUNMAKTADIR);
+            throw new DoktorHastaRandevuException(ErrorType.ISTENILEN_VERI_BULUNAMAMAKTADIR);
         return brans;
     }
 }

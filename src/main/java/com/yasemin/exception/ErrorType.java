@@ -20,7 +20,7 @@ public enum ErrorType {
     DOKTOR_BULUNAMADI(3001,"Doktor bulunamadı", BAD_REQUEST),
     HASTA_BULUNAMADI(4001,"Hasta bulunamadı", BAD_REQUEST),
     ID_NOT_FOUND(1001,"Aradığınız id ya ait kayıt bulunamamıştır.", BAD_REQUEST),
-    ISTENILEN_VERI_BULUNMAKTADIR(1002,"Aradıgınız bilgileri datada bulunmaktadır.",BAD_REQUEST),
+    ISTENILEN_VERI_BULUNAMAMAKTADIR(1002,"Aradıgınız bilgileri datada bulunmaktadır.",BAD_REQUEST),
     BRANS_ZATEN_KAYITLI(2001,"Bu Branş Zaten Kayıtlıdır", BAD_REQUEST),
     RANDEVU_OLUSTURULAMADI(5001,"Randevu talebiniz gercekleşmemiştir",BAD_REQUEST),
     INVALID_TOKEN(1002,"Geçersiz token", BAD_REQUEST);
