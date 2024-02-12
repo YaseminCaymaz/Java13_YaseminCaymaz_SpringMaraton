@@ -5,10 +5,9 @@ import com.yasemin.entity.Randevu;
 import com.yasemin.service.RandevuService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 import static com.yasemin.constants.RestApiUrls.*;
 
@@ -20,5 +19,9 @@ public class RandevuController {
     @PostMapping(ADD)
     public Randevu save(@RequestBody @Valid RandevuSaveRequestDto dto){
         return randevuService.save(dto);
+    }
+    @GetMapping(FIND_BY_DOKTORID)
+    public List<Randevu> findByDoktorId(Long doktorId){
+        return randevuService.findByDoktorId(doktorId);
     }
 }

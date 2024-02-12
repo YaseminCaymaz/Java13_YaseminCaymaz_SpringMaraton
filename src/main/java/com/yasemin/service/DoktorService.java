@@ -1,6 +1,7 @@
 package com.yasemin.service;
 
 import com.yasemin.dto.request.DoktorSaveRequestDto;
+import com.yasemin.dto.response.DoktorGetResponseDto;
 import com.yasemin.entity.Brans;
 import com.yasemin.entity.Doktor;
 import com.yasemin.exception.DoktorHastaRandevuException;
@@ -12,7 +13,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
+
 
 @Service
 @RequiredArgsConstructor
@@ -29,8 +30,8 @@ public class DoktorService {
            return true;
 
     }
-    public List<Doktor> getAll() {
-        List<Doktor> doktorList=doktorRepository.findAll();
+    public List<DoktorGetResponseDto> getAll() {
+        List<DoktorGetResponseDto> doktorList=DoktorMapper.INSTANCE.fromDoktorList(doktorRepository.findAll());
         if(doktorList.isEmpty())
             throw new DoktorHastaRandevuException(ErrorType.INTERNAL_ERROR);
         return doktorList;

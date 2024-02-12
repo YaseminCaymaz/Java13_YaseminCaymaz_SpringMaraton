@@ -5,6 +5,7 @@ import com.yasemin.service.BransService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,7 +19,7 @@ import static com.yasemin.constants.RestApiUrls.*;
 public class BransController {
     private final BransService bransService;
 
-    @GetMapping(ADD)
+    @PostMapping(ADD)
     public ResponseEntity<Void> save(String brans) {
         bransService.save(brans);
         return ResponseEntity.ok().build();

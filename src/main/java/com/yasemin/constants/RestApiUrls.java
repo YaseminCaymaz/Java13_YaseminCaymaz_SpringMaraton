@@ -16,10 +16,10 @@ public class RestApiUrls {
 
 
     public static final  String ADD="/add";
-    public static final  String REGISTER="/register";
+    public static final  String GET_BY_DURUM_AND_RANDEVU="/get-by-durum-and-randevu";
     public static final  String GET_ALL="/get-all";
     public static final  String GET_BY_BRANS="/get-by-brans";
-    public static final  String DELETE_BY_ID="/delete-by-id";
+    public static final  String FIND_BY_DOKTORID="/find-by-doktorid";
     public static final  String GET_BY_ID="/get-by-id";
 
 }

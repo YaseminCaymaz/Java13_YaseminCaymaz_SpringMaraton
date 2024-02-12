@@ -10,6 +10,8 @@ import com.yasemin.utility.enums.Cinsiyet;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 public class RandevuService {
@@ -35,5 +37,12 @@ public class RandevuService {
         if(randevu==null)
             throw new DoktorHastaRandevuException(ErrorType.RANDEVU_OLUSTURULAMADI);
         return randevu;
+    }
+
+    public List<Randevu> findByDoktorId(Long doktorId) {
+        List<Randevu> randevuList=randevuRepository.findByDoktorId(doktorId);
+        if(randevuList.isEmpty())
+            throw new DoktorHastaRandevuException(ErrorType.INTERNAL_ERROR);
+        return randevuList;
     }
 }

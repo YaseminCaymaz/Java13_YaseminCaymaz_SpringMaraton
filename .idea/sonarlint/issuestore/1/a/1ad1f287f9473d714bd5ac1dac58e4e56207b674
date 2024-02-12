@@ -1,9 +1,9 @@
 
-P
-java:S1118":Add a private constructor to hide the implicit public one.(†˜Éå
-=
-java:S1068"'Remove this unused "API" private field.(Ú¥Î
->
-java:S1068"(Remove this unused "TEST" private field.(¬Îãù
->
-java:S1068"(Remove this unused "PROD" private field.(¶ŸãÀ
+W
+java:S1118":Add a private constructor to hide the implicit public one.(†˜Éå8£Ô†ñÙ1
+D
+java:S1068"'Remove this unused "API" private field.(Ú¥Î8¤Ô†ñÙ1
+E
+java:S1068"(Remove this unused "TEST" private field.(¬Îãù8¥Ô†ñÙ1
+E
+java:S1068"(Remove this unused "PROD" private field.(¶ŸãÀ8¥Ô†ñÙ1
